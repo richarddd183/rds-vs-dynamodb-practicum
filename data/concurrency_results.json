@@ -1,0 +1,32 @@
+[
+  {
+    "backend": "dynamodb",
+    "requests": 1000,
+    "workers": 50,
+    "succeeded": 1000,
+    "errors": 0,
+    "throttled": 0,
+    "wall_seconds": 0.9294,
+    "throughput_rps": 1075.98,
+    "mean_s": 0.0447,
+    "p50_s": 0.0344,
+    "p95_s": 0.0562,
+    "p99_s": 0.2949,
+    "max_s": 0.5709
+  },
+  {
+    "backend": "rds",
+    "requests": 1000,
+    "workers": 50,
+    "succeeded": 897,
+    "errors": 103,
+    "throttled": 0,
+    "wall_seconds": 51.4045,
+    "throughput_rps": 17.45,
+    "mean_s": 2.7809,
+    "p50_s": 2.5792,
+    "p95_s": 5.2442,
+    "p99_s": 6.8236,
+    "max_s": 9.2952
+  }
+]
