@@ -1,0 +1,18 @@
+# copy to terraform.tfvars and edit. terraform.tfvars is gitignored.
+# the password is deliberately absent: export it instead, so it never lands on disk.
+#
+#   export TF_VAR_db_password='...'
+#   terraform apply
+
+aws_region = "us-east-1"
+
+# your own public ip as a /32. find it with: curl -s https://checkip.amazonaws.com
+allowed_cidr_blocks = ["203.0.113.10/32"]
+
+# db.t3.micro is free-tier eligible. single-az keeps the cost at one instance.
+db_instance_class = "db.t3.micro"
+multi_az          = false
+
+# PAY_PER_REQUEST is the model this practicum argues for.
+# switch to PROVISIONED to observe throttling under concurrent load.
+dynamodb_billing_mode = "PAY_PER_REQUEST"

@@ -208,3 +208,16 @@ __marimo__/
 
 # macOS
 .DS_Store
+
+# Terraform
+#   the lock file (.terraform.lock.hcl) is intentionally NOT ignored: it pins
+#   provider versions so an apply is reproducible.
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+override.tf
+override.tf.json
